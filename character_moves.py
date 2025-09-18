@@ -44,28 +44,40 @@ def move_rectangle():
     pass
 
 
-def move_bttm():
-    print('Moving bttm')
-
+def move_edge1():
+    for t in range(0,101):
+        x=x1+(x2-x1)*t/100
+        y=y1+(y2-y1)*t/100
+        draw_boy(x,y)
     pass
 
 
-def move_rotate_left():
-    print('Moving rotate left')
+def move_edge2():
+    for t in range(0,101):
+        x=x2+(x3-x2)*t/100
+        y=y2+(y3-y2)*t/100
+        draw_boy(x,y)
     pass
 
 
-def move_rotate_right():
-    print('Moving rotate right')
+def move_edge3():
+    for t in range(0,101):
+        x=x3+(x1-x3)*t/100
+        y=y3+(y1-y3)*t/100
+        draw_boy(x,y)
     pass
 
 
 def move_triangle():
     print("Move triangle")
-    move_bttm()
-    move_rotate_left()
-    move_rotate_right()
-    clear_canvas_now()
+    global x1,y1,x2,y2,x3,y3
+    x1,y1=100,90
+    x2,y2=700,90
+    x3,y3=400,500
+    move_edge1()
+    move_edge2()
+    move_edge3()
+
     pass
 
 
@@ -87,9 +99,9 @@ def draw_boy(x: float, y: float):
 
 
 while True:
-    move_rectangle()
+    #move_rectangle()
     move_triangle()
-    move_circle()
+   # move_circle()
     break
     pass
 
