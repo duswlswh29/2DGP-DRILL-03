@@ -44,8 +44,27 @@ def move_rectangle():
     pass
 
 
+def move_bttm():
+    print('Moving bttm')
+
+    pass
+
+
+def move_rotate_left():
+    print('Moving rotate left')
+    pass
+
+
+def move_rotate_right():
+    print('Moving rotate right')
+    pass
+
+
 def move_triangle():
     print("Move triangle")
+    move_bttm()
+    move_rotate_left()
+    move_rotate_right()
     clear_canvas_now()
     pass
 
