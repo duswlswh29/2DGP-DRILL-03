@@ -8,6 +8,7 @@ grass=load_image('grass.png')
 
 def move_top():
     print('Moving top')
+
     for x in range(790,0,-5):
         draw_boy(x, 550)
     pass
@@ -15,6 +16,7 @@ def move_top():
 
 def move_right():
     print('Moving right')
+    grass.draw_now(400, 30)
     for y in range(90,550,5):
         draw_boy(780,y)
     pass
@@ -22,6 +24,7 @@ def move_right():
 
 def move_bottom():
     print('Moving bottom')
+    grass.draw_now(400, 30)
     for x in range(0,790,5):
         draw_boy(x, 90)
     pass
@@ -29,6 +32,7 @@ def move_bottom():
 
 def move_left():
     print('Moving left')
+    grass.draw_now(400, 30)
     for y in range(550,90,-5):
         draw_boy(10,y)
     pass
@@ -73,7 +77,7 @@ def move_triangle():
     global x1,y1,x2,y2,x3,y3
     x1,y1=100,90
     x2,y2=700,90
-    x3,y3=400,500
+    x3,y3=400,500 #꼭짓점지정
     move_edge1()
     move_edge2()
     move_edge3()
@@ -94,14 +98,16 @@ def move_circle():
 
 def draw_boy(x: float, y: float):
     clear_canvas_now()
+    grass.draw_now(400,30)
     boy.draw_now(x, y)
     delay(0.01)
 
 
 while True:
-    #move_rectangle()
+    grass.draw_now(400,30)
+    move_rectangle()
     move_triangle()
-   # move_circle()
+    move_circle()
     break
     pass
 
