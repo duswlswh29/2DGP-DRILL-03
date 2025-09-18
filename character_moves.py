@@ -47,7 +47,7 @@ def move_triangle():
 def move_circle():
     print("Move circle")
     r=200
-    for deg in range(0, 360):
+    for deg in range(360,0,-1):
         x=r*math.cos(math.radians(deg))+400
         y=r*math.sin(math.radians(deg))+300
         draw_boy(x, y)
