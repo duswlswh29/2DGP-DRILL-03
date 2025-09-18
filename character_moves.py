@@ -80,7 +80,7 @@ def move_triangle():
     x3,y3=400,500 #꼭짓점지정
     move_edge1()
     move_edge2()
-    move_edge3()
+    move_edge3() #반시계방향
 
     pass
 
